@@ -7,7 +7,14 @@ export function Comment({content, onDeleteComment}){
     const [likeCount, setLikeCount] = useState(0)
 
     function handleLike(){
+        // Closure no React
+        // prevState => prevState acessa o valor mais recente do estado sem precisar aguardar um novo contexto
         setLikeCount(prevState => prevState + 1)
+
+        // Não atualiza de 3 em 3 pois os setLikeCount's estão atuando no mesmo contexto onde likeCount é 0 e não foi ainda atualizado para 1
+        // setLikeCount(likeCount + 1)
+        // setLikeCount(likeCount + 1)
+        // setLikeCount(likeCount + 1)
     }
 
     return(
