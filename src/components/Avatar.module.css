@@ -1,0 +1,22 @@
+.imageWithBorder {
+    /* 
+    Primeira opção:
+    box-sizing: initial; faz com que ao adicionar borda e/ou outline isso ocupe 
+    um espaço a mais, aumentando o tamanho do elemento e não exprema seu conteudo */
+    
+    /* Segunda opção */
+    width: calc(3rem + 12px); /*4 + 4 => border laterais + 2 + 2 => outline laterais*/
+    height: calc(3rem + 12px); /*4 + 4 => border vertical + 2 + 2 => outline vertical*/
+
+
+    border-radius: 8px;
+    border: 4px solid var(--gray-800);
+    /* outline é a linha que vem por fora do elemento (contando com a borda) */
+    outline: 2px solid var(--green-500);
+}
+
+.image {
+    width: 3rem;
+    height: 3rem;
+    border-radius: 8px;
+}
